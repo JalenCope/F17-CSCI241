@@ -2,7 +2,7 @@
 
 function readLines($filename)
 {
-    $fileResource = fopen($filename, 'R');
+    $fileResource = fopen($filename, 'r');
     
     if(!is_resource($fileResource))
     {
@@ -24,7 +24,7 @@ function readLines($filename)
 
 function appendLine($filename, $line)
 {
-    $fileResource = fopen($filename, 'A');
+    $fileResource = fopen($filename, 'a');
     
     if(!is_resource($fileResource))
     {
@@ -44,7 +44,7 @@ function deleteLine($filename, $line)
     
     unset($contents[$line]);
     
-    $fileResource = fopen($filename, "W");
+    $fileResource = fopen($filename, "w");
     
     if(!is_resource($fileResource))
     {
